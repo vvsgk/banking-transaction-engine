@@ -5,8 +5,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
+
+    public HomeController() {
+        System.out.println("Home Controller Object Created");
+    }
+
     @GetMapping("/")
     public String home() {
-        return "Hello Banking Engine";
+        return "Hello Banking Engine V4";
     }
 }
