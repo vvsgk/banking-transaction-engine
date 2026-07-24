@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="434558a2-e2e0-4982-82e4-5c5f98c57e2e" name="Changes" comment="v0.0.3 - HomeController Update to @restcontroller">
+    <list default="true" id="434558a2-e2e0-4982-82e4-5c5f98c57e2e" name="Changes" comment="v0.0.4 - HomeController Update to @restcontroller with @GetMapping applied on web">
+      <change beforePath="$PROJECT_DIR$/.idea/banking-transaction-engine.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvsgk/banking_transaction_engine/controller/HomeController.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +16,11 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="cda6b6e2-4a4e-4830-872c-879bc1dfe05b" value="blue" />
+    </colors>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,63 +51,67 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000062229273" />
-      <entry key="MS500" value="1.0268552311197694" />
-      <entry key="S2" value="1.6842252940747857" />
-      <entry key="S5" value="2.9700338515975835" />
-      <entry key="S10" value="4.4432831592061035" />
-      <entry key="S30" value="6.439567829591835" />
-      <entry key="S60" value="7.276190606972441" />
-      <entry key="M2" value="8.055163011564474" />
-      <entry key="M5" value="8.96412914180041" />
-      <entry key="M10" value="9.430958835214891" />
-      <entry key="M15" value="9.843916413506252" />
-      <entry key="M30" value="16.855138073452828" />
-      <entry key="H1" value="48.62633512298322" />
-      <entry key="H2" value="101.06643319107344" />
-      <entry key="H4" value="149.88922343288326" />
-      <entry key="D1" value="210.1298210833121" />
-      <entry key="W1" value="222.80966455115654" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000673387856363" />
+      <entry key="S2" value="1.1322530400196704" />
+      <entry key="S5" value="1.6836165588693492" />
+      <entry key="S10" value="2.4498282840838024" />
+      <entry key="S30" value="5.243577132573521" />
+      <entry key="S60" value="8.989970832876123" />
+      <entry key="M2" value="14.29530768756302" />
+      <entry key="M5" value="20.91926617498235" />
+      <entry key="M10" value="25.18788512207124" />
+      <entry key="M15" value="28.143025684975505" />
+      <entry key="M30" value="34.05926199538956" />
+      <entry key="H1" value="39.46823373475014" />
+      <entry key="H2" value="43.252904130973064" />
+      <entry key="H4" value="47.26462654684527" />
+      <entry key="D1" value="147.97909407342303" />
+      <entry key="W1" value="248.44113805432602" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="6.500344588902813E-223" />
-      <entry key="S30" value="1.3785078199947049E-74" />
-      <entry key="S60" value="1.790574132749732E-37" />
-      <entry key="M2" value="6.940411659557902E-19" />
-      <entry key="M5" value="1.0415400706684798E-7" />
-      <entry key="M10" value="5.881480419830633E-4" />
-      <entry key="M15" value="0.011021062407083554" />
-      <entry key="M30" value="0.22145879028523674" />
-      <entry key="H1" value="1.0339491492099397" />
-      <entry key="H2" value="2.2630092428127746" />
-      <entry key="H4" value="3.3597076857532526" />
-      <entry key="D1" value="4.678619226851465" />
-      <entry key="W1" value="4.952750112216688" />
+      <entry key="MS100" value="5.7009764573707165E-11" />
+      <entry key="MS500" value="0.008936960759846348" />
+      <entry key="S2" value="0.3107025441893893" />
+      <entry key="S5" value="0.7726887980531552" />
+      <entry key="S10" value="1.3327194179727002" />
+      <entry key="S30" value="2.220816504246927" />
+      <entry key="S60" value="2.6237011074344814" />
+      <entry key="M2" value="3.00639547277821" />
+      <entry key="M5" value="3.474622251612891" />
+      <entry key="M10" value="3.9208074450951877" />
+      <entry key="M15" value="4.415556612063423" />
+      <entry key="M30" value="5.655999805368057" />
+      <entry key="H1" value="6.914195701924839" />
+      <entry key="H2" value="7.8254149635603465" />
+      <entry key="H4" value="8.41512989499302" />
+      <entry key="D1" value="11.126120675982925" />
+      <entry key="W1" value="13.441115922824585" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9726549533817302" />
-      <entry key="MS500" value="1.0211139880689755" />
-      <entry key="S2" value="1.676415649562891" />
-      <entry key="S5" value="2.913646600145806" />
-      <entry key="S10" value="4.359835838447906" />
-      <entry key="S30" value="6.381674093717599" />
-      <entry key="S60" value="7.241385526556206" />
-      <entry key="M2" value="8.036069009098837" />
-      <entry key="M5" value="8.956049269936791" />
-      <entry key="M10" value="9.427426998271827" />
-      <entry key="M15" value="9.852141202705749" />
-      <entry key="M30" value="17.074843468085806" />
-      <entry key="H1" value="49.658706088170305" />
-      <entry key="H2" value="103.32811042811971" />
-      <entry key="H4" value="153.248019796438" />
-      <entry key="D1" value="214.8082388493643" />
-      <entry key="W1" value="227.76238440517992" />
+      <entry key="MS100" value="5.188888148617904E-8" />
+      <entry key="MS500" value="0.036815260985491205" />
+      <entry key="S2" value="0.7247373198670558" />
+      <entry key="S5" value="1.9559004396095352" />
+      <entry key="S10" value="3.4271365065020256" />
+      <entry key="S30" value="7.259652575762904" />
+      <entry key="S60" value="11.469408463569103" />
+      <entry key="M2" value="17.20573567721757" />
+      <entry key="M5" value="24.34511142642848" />
+      <entry key="M10" value="29.079852618011913" />
+      <entry key="M15" value="32.53604975310685" />
+      <entry key="M30" value="39.69978042913865" />
+      <entry key="H1" value="46.37252458609178" />
+      <entry key="H2" value="51.0725781494027" />
+      <entry key="H4" value="55.67663645276" />
+      <entry key="D1" value="159.1045629428122" />
+      <entry key="W1" value="261.8821464128357" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -108,37 +119,48 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3FjPRw26GNSu5Vs110ibFlYGazd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BankingTransactionEngineApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BankingTransactionEngineApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BankingTransactionEngineApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BankingTransactionEngineApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -172,8 +194,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
       </set>
     </attachedChunks>
   </component>
@@ -202,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782923002697</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v0.0.4 - HomeController Update to @restcontroller with @GetMapping applied on web">
+      <option name="closed" value="true" />
+      <created>1783012207813</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1783012207813</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +253,23 @@
     <MESSAGE value="Version 0.0.1 - Test Git upload endpoints" />
     <MESSAGE value="v0.0.2 - HomeController Update" />
     <MESSAGE value="v0.0.3 - HomeController Update to @restcontroller" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.3 - HomeController Update to @restcontroller" />
+    <MESSAGE value="v0.0.4 - HomeController Update to @restcontroller with @GetMapping applied on web" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.4 - HomeController Update to @restcontroller with @GetMapping applied on web" />
     <option name="LAST_CHUNK_COMMIT_MESSAGE" value="Version 0.0.1 - Test Git upload endpoints" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvsgk/banking_transaction_engine/customers/repository/InMemoryCustomerRepository.java</url>
+          <line>13</line>
+          <properties class="com.vvsgk.banking_transaction_engine.customers.repository.InMemoryCustomerRepository" method="save">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
